@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { View, TextInput, StyleSheet, Alert } from 'react-native';
 import PrimaryButton from '../components/PrimaryButton';
 
-export default function StarGameScreen(){
+export default function StarGameScreen({onPickedNumber}){
     const [enteredNumber, setEnteredNumber] = useState('');
 
     const numberInputHandler = (enteredText) => {
@@ -23,7 +23,8 @@ export default function StarGameScreen(){
             );
             return;
         }
-        console.log('Valid Number!');
+        console.log('Valid Number!', chosenNumber);
+        onPickedNumber(chosenNumber);
     }
 
     return (
