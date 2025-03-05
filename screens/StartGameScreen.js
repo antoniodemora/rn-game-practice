@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { View, TextInput, StyleSheet, Alert } from 'react-native';
 import PrimaryButton from '../components/PrimaryButton';
+import Colors from '../constants/color';
 
 export default function StarGameScreen({onPickedNumber}){
     const [enteredNumber, setEnteredNumber] = useState('');
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
         marginTop: 100,
         marginHorizontal: 24,
         padding: 16,
-        backgroundColor: '#1B1B1F',
+        backgroundColor: Colors.background,
         borderRadius: 8,
         boxShadow: '2 2 3 1 gray'
     },
@@ -66,9 +67,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         textAlignVertical: 'center',
         paddingVertical: 0,
-        borderBottomColor: '#2E294E',
+        borderBottomColor: Colors.accent,
         borderBottomWidth: 2,
-        color: '#EDEDEDC7',
+        color: Colors.text,
         marginVertical: 8,
         fontWeight: 'bold'
     },
