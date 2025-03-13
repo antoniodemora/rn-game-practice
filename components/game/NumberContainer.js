@@ -20,8 +20,8 @@ const style = StyleSheet.create({
         alignContent: 'center'
     },
     numberText: {
+        fontFamily: 'open-sans-bold',
         color: Colors.text,
-        fontSize: 36,
-        fontWeight: 'bold'
+        fontSize: 36
     }
 });
