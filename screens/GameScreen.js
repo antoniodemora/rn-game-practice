@@ -89,7 +89,8 @@ export default function GameScreen({userNumber, onGameOver}) {
 const styles = StyleSheet.create({
     game: {
         flex: 1,
-        padding: 48
+        padding: 48,
+        alignItems: 'center'
     },
     instructionText: {
         marginBottom: 12

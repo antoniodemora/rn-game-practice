@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, Text } from 'react-native';
+import { View, StyleSheet, Image, Text, Dimensions } from 'react-native';
 import Title from '../components/ui/Title';
 import Colors from '../constants/color';
 import PrimaryButton from '../components/ui/PrimaryButton';
@@ -19,21 +19,24 @@ const GameOverScreen = ({ roundNumber, userNumber, onStartNewGame }) => {
     );
 };
 
+const windowWidth = Dimensions.get('window').width;
+
 const styles = StyleSheet.create({
     rootContainer: {
         flex: 1,
+        //marginTop: 75,
         padding: 24,
         justifyContent: 'center',
         alignItems: 'center'
     },
     imageContainer: {
-        width: 300,
-        height: 300,
-        borderRadius: 150,
+        width: windowWidth < 380 ? 150 : 300,
+        height: windowWidth < 380 ? 150 : 300,
+        borderRadius: windowWidth < 380 ? 75 : 150,
         borderWidth: 3,
         borderColor: Colors.secondary,
         overflow: 'hidden',
-        margin: 36
+        margin: windowWidth < 380 ? 18 : 36
     },
     image: {
         width: '100%',

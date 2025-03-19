@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, TextInput, StyleSheet, Alert, Text } from 'react-native';
+import { View, TextInput, StyleSheet, Alert, Dimensions } from 'react-native';
 import PrimaryButton from '../components/ui/PrimaryButton';
 import Colors from '../constants/color';
 import Title from '../components/ui/Title';
@@ -55,11 +55,14 @@ export default function StarGameScreen({onPickedNumber}){
     )
 }
 
+const windowWidth = Dimensions.get('window').width;
+
 const styles = StyleSheet.create({
     rootContainer: {
         flex: 1,
         marginTop: 100,
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: windowWidth > 420 ? 'center' : 'flex-start'
     },
     numberInput: {
         fontSize: 32,

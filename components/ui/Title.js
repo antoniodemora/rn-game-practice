@@ -9,13 +9,14 @@ export default Title;
 
 const styles = StyleSheet.create({
     title: {
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'open-sans-bold', // not using fontWeight since the font itself is bold
         fontSize: 24,
-        //fontWeight: 'bold',
         color: Colors.text,
         textAlign: 'center',
         borderWidth: 2,
         borderColor: Colors.accent,
-        padding: 12
+        padding: 12,
+        maxWidth: '80%',
+        width: 300
     }
 })
