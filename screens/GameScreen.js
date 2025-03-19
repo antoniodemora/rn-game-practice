@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { StyleSheet, Text , View, Alert, FlatList } from 'react-native';
+import { StyleSheet, View, Alert, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'
 import Title from '../components/ui/Title';
 import NumberContainer from '../components/game/NumberContainer';
@@ -51,8 +51,6 @@ export default function GameScreen({userNumber, onGameOver}) {
         const newRndNum = generateRandomBetween(minBoundary, maxBoundary, currentGuess);
         setCurrentGuess(newRndNum);
         setGuessRounds((prevGuessRounds) => [newRndNum, ...prevGuessRounds]);
-
-        console.log("rounds: ", guessRounds);
     }
     const guessRoundsListLength = guessRounds.length;
 
